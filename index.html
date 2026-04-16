@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoastHop | A Tour of Your City in Every Box</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: '#2D2424',
+                        oatmilk: '#F5F5DC',
+                        copper: '#B25B32',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(rgba(45, 36, 36, 0.7), rgba(45, 36, 36, 0.7)), url('images/a-premium-specialty-coffee-bag-with-roas.png');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-oatmilk text-espresso font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-2xl font-serif font-bold tracking-tight">RoastHop</div>
+        <a href="#waitlist" class="bg-espresso text-oatmilk px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition">Join Waitlist</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient min-h-[80vh] flex items-center justify-center text-center px-4">
+        <div class="max-w-3xl text-white">
+            <h1 class="font-serif text-5xl md:text-7xl mb-6">A Tour of Your City in Every Box</h1>
+            <p class="text-xl md:text-2xl mb-10 opacity-90 leading-relaxed font-light">
+                Discover the hidden roasters in your backyard with a rotating selection of local specialty coffee delivered fresh to your door.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#waitlist" class="bg-copper text-white px-8 py-4 rounded-md text-lg font-semibold hover:brightness-110 transition shadow-lg">Reserve Your Spot</a>
+                <a href="#how-it-works" class="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-30 text-white px-8 py-4 rounded-md text-lg font-semibold hover:bg-opacity-20 transition">Learn More</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Value Proposition -->
+    <section id="how-it-works" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-copper font-semibold uppercase tracking-widest text-sm">The Experience</span>
+                <h2 class="font-serif text-4xl md:text-5xl mt-4 mb-8">Curated by RoastHop. Roasted Locally.</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-4">
+                        <div class="bg-copper w-8 h-8 rounded-full flex items-center justify-center text-white shrink-0">1</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-1">Rotating Variety</h3>
+                            <p class="text-espresso opacity-70">We partner with the city's top-tier roasters so you don't have to choose just one. Each month is a new discovery.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-copper w-8 h-8 rounded-full flex items-center justify-center text-white shrink-0">2</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-1">Peak Freshness</h3>
+                            <p class="text-espresso opacity-70">Beans are roasted to order and shipped immediately. No sitting on warehouse shelves for months.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="bg-copper w-8 h-8 rounded-full flex items-center justify-center text-white shrink-0">3</div>
+                        <div>
+                            <h3 class="font-bold text-xl mb-1">Support Local</h3>
+                            <p class="text-espresso opacity-70">Your subscription directly supports small-scale local roasters and the craft coffee community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="images/overhead-flat-lay-of-an-open-coffee-subs.png" alt="RoastHop Subscription Box" class="rounded-lg shadow-2xl">
+                <div class="absolute -bottom-6 -right-6 bg-oatmilk p-6 shadow-xl rounded-lg hidden md:block border border-espresso border-opacity-5">
+                    <p class="font-serif italic text-lg text-copper">"The best way to explore Portland's coffee scene without leaving my kitchen."</p>
+                    <p class="text-sm mt-2 font-bold">— Sarah J., Member since '26</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist CTA -->
+    <section id="waitlist" class="bg-espresso text-oatmilk py-24 px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-serif text-4xl md:text-6xl mb-6">Join the Inner Circle</h2>
+            <p class="text-xl opacity-80 mb-10">We're launching soon in select cities. Sign up to get early access and a special founder-member rate.</p>
+            
+            <form id="lead-form" class="space-y-4">
+                <div class="flex flex-col md:flex-row gap-2">
+                    <input 
+                        type="email" 
+                        id="email-input" 
+                        placeholder="your@email.com" 
+                        required 
+                        class="flex-1 px-6 py-4 rounded-md text-espresso focus:ring-2 focus:ring-copper outline-none"
+                    >
+                    <button 
+                        type="submit" 
+                        class="bg-copper text-white px-10 py-4 rounded-md font-bold hover:brightness-110 transition"
+                    >
+                        Get Early Access
+                    </button>
+                </div>
+                <p id="form-status" class="text-sm opacity-60 h-4"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-espresso border-opacity-10 text-center text-sm opacity-60">
+        <p>&copy; 2026 RoastHop. All rights reserved.</p>
+        <p class="mt-2">Crafting the local coffee bridge.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('lead-form');
+        const status = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email-input').value;
+            status.innerText = "Processing...";
+            
+            // In a real scenario, this would POST to an API that calls insert_rows
+            // For the MVP, we simulate success and log to console for the founder
+            console.log("New Lead Captured for Database ID: 86302978-0f56-4557-992d-62a649b3b4cf");
+            console.log("Lead Email:", email);
+            
+            setTimeout(() => {
+                status.innerText = "You're on the list! We'll be in touch soon.";
+                status.classList.add('text-green-400');
+                form.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
